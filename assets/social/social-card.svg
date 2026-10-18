@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Francesco Paolo Maiale — Mathematics</title>
+  <desc id="description">Analysis, Geometry, Computation. francescomaiale.github.io</desc>
+  <rect width="1200" height="630" fill="#f8f8f3"/>
+  <path d="M80 64H1120" stroke="#d2d8ce" stroke-width="1"/>
+  <text x="80" y="122" fill="#98421f" font-family="Georgia, 'Times New Roman', serif" font-size="26">Mathematics</text>
+  <text x="76" y="286" fill="#163d30" font-family="Georgia, 'Times New Roman', serif" font-size="88" letter-spacing="-1.6">Francesco Paolo Maiale</text>
+  <text x="80" y="352" fill="#56665e" font-family="Georgia, 'Times New Roman', serif" font-size="30">Analysis · Geometry · Computation</text>
+  <path d="M80 414H156" stroke="#98421f" stroke-width="3"/>
+  <path d="M80 500H1120" stroke="#d2d8ce" stroke-width="1"/>
+  <text x="80" y="550" fill="#192c25" font-family="Georgia, 'Times New Roman', serif" font-size="25">francescomaiale.github.io</text>
+</svg>
