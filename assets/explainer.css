@@ -5,6 +5,9 @@
 .research-feature-image{display:block;border:1px solid var(--line);border-radius:4px;overflow:hidden}
 .research-feature-image:hover{border-color:var(--green)}
 .research-feature-image img{display:block;width:100%;height:auto}
+.research-stories>.eyebrow{margin-bottom:2rem}
+.research-stories .research-feature+.research-feature{border-top:1px solid var(--line);margin-top:3rem;padding-top:3rem}
+.research-stories .research-feature .topic{margin-top:0;font-size:.875rem;color:var(--accent)}
 .explainer-hero{padding-block:2rem 3.5rem}
 .explainer-back{display:inline-flex;align-items:center;min-height:44px;font-size:.9375rem;color:var(--muted);margin-bottom:2.5rem}
 .explainer-hero .eyebrow{color:var(--accent);margin-bottom:1.3rem}
