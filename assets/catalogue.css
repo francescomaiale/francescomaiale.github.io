@@ -81,3 +81,26 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline
 @media(max-width:850px){.page-hero{grid-template-columns:1fr;gap:2rem;padding-block:3rem}.page-aside{border-left:0;border-top:1px solid var(--line);padding:1.5rem 0 0}.aside-links{flex-direction:row;flex-wrap:wrap;gap:1rem 1.5rem}.library-numbers{grid-template-columns:1fr 1fr;max-width:27rem;margin-bottom:1rem}.theme-grid,.teaching-grid,.thesis-grid{grid-template-columns:1fr;gap:2rem}.theme-grid h2 br{display:none}.theme-grid .step-number{margin-bottom:.7rem}.theme-grid p{margin-bottom:0}.teaching-grid article,.thesis-grid article{padding-top:1.3rem}.catalogue-paper{grid-template-columns:90px 1fr;gap:1.5rem}.notes-grid{gap:0 2rem}.upcoming{grid-template-columns:1fr;gap:1.5rem;padding:2rem;margin-bottom:2.5rem}.upcoming h2{font-size:2.2rem}.activity-row,.academic-timeline article{grid-template-columns:130px 1fr;gap:1.5rem}.bio-grid,.service-grid,.personal-section{grid-template-columns:1fr;gap:2rem}.bio-grid h2 br{display:none}.workshop-grid{gap:2rem}.section-heading>a{font-size:.9375rem}}
 @media(max-width:600px){.notes-grid,.workshop-grid{grid-template-columns:1fr}.catalogue-paper{grid-template-columns:1fr;gap:.65rem}.paper-status{color:var(--accent)}.activity-row,.academic-timeline article{grid-template-columns:1fr;gap:.7rem}.note-card h4{font-size:1.55rem}.catalogue-controls{padding:1rem;gap:.9rem .7rem}.catalogue-controls select,.catalogue-controls input{font-size:1rem}.page-hero h1{font-size:3rem}.page-description{font-size:1.0625rem}.upcoming{padding:1.7rem}.upcoming h2{font-size:2rem}.year-heading{line-height:1.5}.dog-grid{gap:1rem}.site-footer>div{gap:1.2rem}.section-heading{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Catalogue sharing actions; existing page colours and typography stay shared. */
+.catalogue-toolbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem 1.5rem;margin-bottom:.5rem}
+.catalogue-toolbar .result-count{margin:0}
+.catalogue-toolbar .copy-button,.resource-links .copy-button,.catalogue-manual-copy .copy-button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.55rem .85rem;border:1px solid var(--line);border-radius:3px;background:var(--paper);color:var(--green);font:inherit;font-size:.875rem;line-height:1.5;cursor:pointer;text-align:center}
+.catalogue-toolbar .copy-button:hover,.resource-links .copy-button:hover,.catalogue-manual-copy .copy-button:hover{background:#e8eee5;border-color:var(--green)}
+.catalogue-toolbar .copy-button:focus-visible,.resource-links .copy-button:focus-visible,.catalogue-manual-copy .copy-button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.copy-feedback{min-height:1.5em;margin:0 0 1.25rem;font-size:.875rem;line-height:1.5;color:var(--muted);overflow-wrap:anywhere}
+[data-catalogue] .resource-links{align-items:center}
+[data-catalogue] .resource-links a{display:inline-flex;align-items:center;min-height:44px}
+.catalogue-share-dialog{width:min(38rem,calc(100% - 2rem));max-height:calc(100dvh - 2rem);padding:2rem;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);box-shadow:0 18px 70px #192c2533;overflow:auto}
+.catalogue-share-dialog::backdrop{background:#192c2573}
+.catalogue-share-dialog form{display:grid;gap:1.25rem}
+.catalogue-share-dialog h2{font-family:var(--serif);font-size:2rem;line-height:1.2}
+.catalogue-share-dialog p,.catalogue-manual-copy p{margin:0;font-size:1rem;line-height:1.6;color:var(--muted)}
+.catalogue-share-dialog label,.catalogue-manual-copy label{display:grid;gap:.5rem;font-size:.875rem;font-weight:600}
+.catalogue-share-dialog input,.catalogue-manual-copy input{width:100%;min-height:44px;padding:.7rem;border:1px solid #abb9ab;border-radius:3px;background:#fff;color:var(--ink);font:inherit;font-size:1rem;font-weight:400}
+.catalogue-share-dialog input:focus-visible,.catalogue-manual-copy input:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.catalogue-share-dialog .button,.catalogue-manual-copy .copy-button{justify-self:start;min-height:44px;cursor:pointer}
+.catalogue-manual-copy{display:grid;gap:1rem;padding:1.25rem;margin-bottom:1.5rem;border:1px solid var(--line);border-radius:4px;background:#edf1e9}
+@media(max-width:600px){.catalogue-share-dialog{padding:1.4rem}.catalogue-toolbar{align-items:flex-start}.catalogue-toolbar .copy-button{flex-shrink:0}}
+[data-catalogue] [data-copy-link]{min-width:6.5rem}
+[data-catalogue] [data-copy-view]{min-width:9rem}
