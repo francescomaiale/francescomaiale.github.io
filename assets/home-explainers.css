@@ -1,0 +1,16 @@
+/* Compact introductions to the three research stories on the homepage. */
+.home-explainer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem}
+.home-explainer{min-width:0}
+.home-explainer-link{display:flex;flex-direction:column;height:100%;text-decoration:none}
+.home-explainer-link:focus-visible{outline-offset:6px}
+.home-explainer-visual{aspect-ratio:25/14;overflow:hidden;border:1px solid var(--line);border-radius:3px;background:var(--paper)}
+.home-explainer-visual img{display:block;width:100%;height:100%;object-fit:contain}
+.home-explainer-copy{display:flex;flex-direction:column;flex:1}
+.home-explainer-copy .topic{margin:1.4rem 0 .75rem}
+.home-explainer h3{font-size:clamp(1.65rem,2.4vw,2.1rem);line-height:1.15;letter-spacing:-.01em;margin:0;color:var(--green)}
+.home-explainer-description{font-size:1rem;line-height:1.65;color:var(--muted);margin:1rem 0 1.5rem}
+.home-explainer-action{font-size:.9375rem;font-weight:500;line-height:1.5;margin-top:auto;text-decoration:underline;text-underline-offset:.25em}
+.home-explainer-link:hover h3{text-decoration:underline;text-underline-offset:.12em}
+.home-explainer-link:hover .home-explainer-visual{border-color:var(--green)}
+@media(max-width:850px){.home-explainer-grid{grid-template-columns:1fr;gap:2.5rem}.home-explainer-link{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1fr);gap:1.75rem;align-items:start}.home-explainer-copy .topic{margin-top:0}.home-explainer h3{font-size:1.85rem}}
+@media(max-width:600px){.home-explainer-link{display:flex;gap:0}.home-explainer-copy .topic{margin-top:1.3rem}.home-explainer-description{margin-bottom:1.1rem}.home-explainer-grid{gap:2.8rem}}
