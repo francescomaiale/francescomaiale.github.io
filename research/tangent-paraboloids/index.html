@@ -11,8 +11,8 @@
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Beyond tangent planes — Francesco Paolo Maiale"><meta name="twitter:description" content="How the rate of approximation by tangent subgroups reveals intrinsic smooth pieces in Heisenberg groups: an introduction to joint work with Kennedy Obinna Idu."><meta name="twitter:image" content="https://francescomaiale.github.io/assets/social/social-card.png">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://francescomaiale.github.io/#person", "name": "Francesco Paolo Maiale", "url": "https://francescomaiale.github.io/", "jobTitle": "Postdoctoral researcher in Mathematics", "affiliation": {"@type": "CollegeOrUniversity", "name": "Gran Sasso Science Institute"}, "sameAs": ["https://orcid.org/0000-0002-3389-6937", "https://arxiv.org/a/maiale_f_1.html", "https://scholar.google.com/citations?user=3OeFV2oAAAAJ", "https://github.com/francescomaiale"]}, {"@type": "WebSite", "@id": "https://francescomaiale.github.io/#website", "name": "Francesco Paolo Maiale", "url": "https://francescomaiale.github.io/", "publisher": {"@id": "https://francescomaiale.github.io/#person"}}, {"@type": "Article", "@id": "https://francescomaiale.github.io/research/tangent-paraboloids/", "url": "https://francescomaiale.github.io/research/tangent-paraboloids/", "name": "Beyond tangent planes — Francesco Paolo Maiale", "description": "How the rate of approximation by tangent subgroups reveals intrinsic smooth pieces in Heisenberg groups: an introduction to joint work with Kennedy Obinna Idu.", "isPartOf": {"@id": "https://francescomaiale.github.io/#website"}, "about": {"@id": "https://francescomaiale.github.io/#person"}, "author": {"@id": "https://francescomaiale.github.io/#person"}, "datePublished": "2026-10-18", "headline": "Beyond tangent planes", "citation": "https://doi.org/10.1515/agms-2023-0105", "image": "https://francescomaiale.github.io/assets/research/tangent-paraboloids.svg"}]}</script>
 <!-- discovery:end -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23163d30'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='40' fill='%23f8f8f3'%3Em%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/catalogue.css"><link rel="stylesheet" href="/assets/explainer.css?v=geometry-20261018">
-</head><body>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23163d30'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='40' fill='%23f8f8f3'%3Em%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/catalogue.css"><link rel="stylesheet" href="/assets/explainer.css?v=geometry-20261018"><link rel="stylesheet" href="/assets/interactive-diagrams.css?v=20261018">
+<script src="/assets/interactive-diagrams.js?v=20261018" defer></script></head><body>
 <a class="skip-link" href="#main">Skip to content</a><header class="site-header wrap">
 <a class="wordmark" href="/" aria-label="Francesco Paolo Maiale, homepage">F. P. Maiale<span>Mathematics</span></a>
 <nav class="desktop-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/research/" aria-current="true">Research</a><a href="/teaching/">Teaching &amp; Notes</a><a href="/activities/">Talks &amp; Activities</a><a href="/arxivlens/">ArxivLens</a><a href="/about/">About &amp; CV</a></nav>
@@ -26,7 +26,55 @@
 <p class="explainer-byline">Francesco Paolo Maiale · Based on joint work with Kennedy Obinna Idu</p>
 <div class="actions"><a class="button" href="https://arxiv.org/abs/2102.05165">Read the paper</a><a class="text-link" href="#the-idea">Explore the idea ↓</a><a class="text-link" href="#the-result">The result ↓</a></div>
 </header>
-<figure class="explainer-figure wrap"><img src="/assets/research/tangent-paraboloids.svg" width="1000" height="560" alt="Schematic distance profile: the power-law bound r to the three-halves lies below a linear bound r between zero and one. Its thickness relative to r decreases as we approach the origin."><figcaption>A distance profile, rather than a picture of a surface: the green envelope narrows relative to the observation scale. Here α = ½ and the constants are normalized to one. The theorem controls the measure of points outside such an envelope, rather than requiring every point to lie inside it.</figcaption></figure>
+<figure class="explainer-figure wrap" id="interactive-diagram" aria-label="Research diagram"><div class="interactive-diagram" data-interactive="tangent-paraboloids" hidden>
+  <div class="diagram-heading">
+    <h2 class="diagram-title" id="tp-interactive-heading">Zoom into the distance profile</h2>
+    <button class="diagram-reset" type="button" data-tp-reset>Reset</button>
+  </div>
+  <p class="diagram-hint">Each zoom step halves the scale r. The coefficient λ stays fixed at 1.</p>
+  <div class="diagram-controls">
+    <label class="diagram-control" for="tp-alpha">
+      <span>Hölder exponent α: <output for="tp-alpha" data-tp-alpha-value>0.50</output></span>
+      <input id="tp-alpha" data-tp-alpha type="range" min="0.1" max="1" step="0.05" value="0.5">
+    </label>
+    <label class="diagram-control" for="tp-zoom">
+      <span>Zoom: <output for="tp-zoom" data-tp-zoom-value>step 0 of 8</output></span>
+      <input id="tp-zoom" data-tp-zoom type="range" min="0" max="8" step="1" value="0">
+    </label>
+  </div>
+  <p class="diagram-hint">Dashed line: <strong>y = x</strong>. Shaded envelope: <strong>y = r<sup>α</sup>x<sup>1+α</sup></strong>.</p>
+  <div class="diagram-stage">
+    <svg class="tangent-profile-chart" xmlns="http://www.w3.org/2000/svg" width="1000" height="480" viewBox="0 0 1000 480" role="img" aria-labelledby="tp-plot-title tp-plot-desc">
+      <title id="tp-plot-title">Normalized distance envelopes</title>
+      <desc id="tp-plot-desc" data-tp-description="">With λ equal to one, the normalized linear reference is y equals x. The green envelope is y equals r to the power alpha times x to the power one plus alpha. This is a schematic distance profile, not a surface or a set of data points.</desc>
+      <rect width="1000" height="480" fill="#f8f8f3"/>
+      <path d="M125 205H925M525 30V380" fill="none" stroke="#d2d8ce" stroke-width="1"/>
+      <path data-tp-area="" fill="#163d30" fill-opacity="0.12"/>
+      <path d="M125 380L925 30" fill="none" stroke="#98421f" stroke-width="3" stroke-dasharray="9 7"/>
+      <path data-tp-curve="" fill="none" stroke="#163d30" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <g fill="none" stroke="#56665e" stroke-width="1.8">
+        <path d="M125 20V380H937"/>
+        <path d="M120 30H130M120 205H130M525 375V385M925 375V385"/>
+      </g>
+      <g fill="#56665e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="26">
+        <text x="113" y="413" text-anchor="middle">0</text>
+        <text x="525" y="413" text-anchor="middle">1/2</text>
+        <text x="925" y="413" text-anchor="middle">1</text>
+        <text x="105" y="39" text-anchor="end">1</text>
+        <text x="105" y="214" text-anchor="end">1/2</text>
+        <text x="525" y="458" text-anchor="middle">x = s / r, where s = d(p, q)</text>
+        <text x="44" y="205" text-anchor="middle" transform="rotate(-90 44 205)">y = d(p<tspan dy="-9" font-size="20">−1</tspan><tspan dy="9">q, V) / r</tspan></text>
+      </g>
+    </svg>
+  </div>
+  <dl class="diagram-readouts" aria-live="polite" aria-atomic="true">
+    <div class="diagram-readout"><dt>Scale r</dt><dd class="diagram-value" data-tp-radius>1</dd></div>
+    <div class="diagram-readout"><dt>Raw error bound r<sup>1+α</sup></dt><dd class="diagram-value" data-tp-raw-error>1</dd></div>
+    <div class="diagram-readout"><dt>Relative error bound r<sup>α</sup></dt><dd class="diagram-value" data-tp-relative-error>1</dd></div>
+  </dl>
+  <p class="diagram-caption">At distance s = r, the raw bound is r<sup>1+α</sup>; dividing by r gives the relative bound. This is a schematic distance profile. It depicts neither a surface nor all points of a measurable set; the theorem’s measure and density assumptions remain essential.</p>
+</div>
+<img data-diagram-fallback src="/assets/research/tangent-paraboloids.svg" width="1000" height="560" alt="Schematic distance profile: the power-law bound r to the three-halves lies below a linear bound r between zero and one. Its thickness relative to r decreases as we approach the origin."><figcaption data-diagram-fallback>A distance profile, rather than a picture of a surface: the green envelope narrows relative to the observation scale. Here α = ½ and the constants are normalized to one. The theorem controls the measure of points outside such an envelope, rather than requiring every point to lie inside it.</figcaption></figure>
 <section class="section wrap explainer-section" id="the-question"><div><p class="eyebrow">01 · A different geometry</p><h2>Zooming in<br> changes the ruler.</h2></div><div class="explainer-prose">
 <p>Think of a curve drawn on paper. Near an ordinary smooth point, a short section looks almost straight. The tangent line captures its first-order shape; the remaining deviation carries more information.</p>
 <p>Our setting is a Heisenberg group. Its natural magnification scales horizontal coordinates by <i>r</i> and the central coordinate by <i>r</i><sup>2</sup>. Distances and tangent models must respect this geometry. For the surfaces in our paper, the tangent model is a <em>vertical homogeneous subgroup</em>: a subgroup preserved by these dilations and containing the central direction. See <a href="https://arxiv.org/html/2102.05165v3#S2">§2 of the paper</a>.</p>
