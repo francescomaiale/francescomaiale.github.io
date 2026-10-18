@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" role="img" aria-labelledby="lsr-title lsr-desc">
+  <title id="lsr-title">Choosing and repeating matrix products</title>
+  <desc id="lsr-desc">A conceptual binary product tree begins at the identity I. The first choice gives A or B; a second choice gives AA, AB, BA, or BB. Copper highlights the example word AB, followed below by the repeated mixed word AB AB AB and an ellipsis. There are two choices per step and two to the power k product words of length k. Different words can give the same matrix. In general AB can differ from BA. The highlighted word is an example, not a claim of optimality or a computed bound.</desc>
+  <rect width="1000" height="520" fill="#f8f8f3"/>
+  <text x="500" y="44" text-anchor="middle" fill="#56665e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="30">2 choices per step · 2ᵏ words at length k</text>
+  <g fill="none" stroke="#d2d8ce" stroke-width="3" stroke-linecap="round">
+    <path d="M500 126L250 164M500 126L750 164"/>
+    <path d="M250 226L125 264M250 226L375 264M750 226L625 264M750 226L875 264"/>
+  </g>
+  <g fill="none" stroke="#98421f" stroke-width="5" stroke-linecap="round">
+    <path d="M500 126L250 164M250 226L375 264"/>
+  </g>
+  <g fill="#f8f8f3" stroke="#d2d8ce" stroke-width="2">
+    <circle cx="500" cy="100" r="27"/>
+    <circle cx="250" cy="195" r="32" stroke="#98421f" stroke-width="3"/>
+    <circle cx="750" cy="195" r="32"/>
+    <rect x="69" y="263" width="112" height="64" rx="8"/>
+    <rect x="319" y="263" width="112" height="64" rx="8" stroke="#98421f" stroke-width="3"/>
+    <rect x="569" y="263" width="112" height="64" rx="8"/>
+    <rect x="819" y="263" width="112" height="64" rx="8"/>
+  </g>
+  <g fill="#163d30" font-family="Georgia, 'Times New Roman', serif" font-size="40" text-anchor="middle">
+    <text x="500" y="114">I</text>
+    <text x="250" y="209" fill="#98421f">A</text>
+    <text x="750" y="209">B</text>
+    <text x="125" y="309">AA</text>
+    <text x="375" y="309" fill="#98421f">AB</text>
+    <text x="625" y="309">BA</text>
+    <text x="875" y="309">BB</text>
+  </g>
+  <path d="M60 356H940" stroke="#d2d8ce" stroke-width="1"/>
+  <text x="500" y="419" text-anchor="middle" fill="#56665e" font-family="Georgia, 'Times New Roman', serif" font-size="34">Example repetition: <tspan fill="#98421f">(AB)(AB)(AB)…</tspan></text>
+  <text x="500" y="484" text-anchor="middle" fill="#56665e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="30">Order matters: <tspan fill="#163d30">AB</tspan> can differ from <tspan fill="#163d30">BA</tspan></text>
+</svg>
