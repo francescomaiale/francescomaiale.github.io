@@ -7,6 +7,13 @@
     <language>en</language>
     <atom:link href="https://francescomaiale.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>A first look at TeXTint</title>
+      <link>https://francescomaiale.github.io/updates/#textint-introduction-2026-10-19</link>
+      <guid isPermaLink="true">https://francescomaiale.github.io/updates/#textint-introduction-2026-10-19</guid>
+      <description>&lt;p&gt;Meet the LaTeX and Markdown editor I am developing for mathematical writing, with local document previews, customizable themes, and project and bibliography tools.&lt;/p&gt;&lt;p&gt;&lt;a href="https://francescomaiale.github.io/software/#textint"&gt;Explore this update&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Software</category>
+    </item>
+    <item>
       <title>Slides from three talks are now available</title>
       <link>https://francescomaiale.github.io/updates/#talk-slides-2026-10-19</link>
       <guid isPermaLink="true">https://francescomaiale.github.io/updates/#talk-slides-2026-10-19</guid>
