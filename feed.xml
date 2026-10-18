@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Francesco Paolo Maiale — Latest updates</title>
+    <link>https://francescomaiale.github.io/updates/</link>
+    <description>Updates on research, talks, lecture notes, and software from Francesco Paolo Maiale.</description>
+    <language>en</language>
+    <atom:link href="https://francescomaiale.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Slides from three talks are now available</title>
+      <link>https://francescomaiale.github.io/updates/#talk-slides-2026-10-19</link>
+      <guid isPermaLink="true">https://francescomaiale.github.io/updates/#talk-slides-2026-10-19</guid>
+      <description>&lt;p&gt;Download the slides from NIC60, the Barcelona Analysis Conference, and the ASAAP Seminar on the Talks &amp;amp; Activities page.&lt;/p&gt;&lt;p&gt;&lt;a href="https://francescomaiale.github.io/activities/"&gt;Explore this update&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Talks</category>
+      <pubDate>Sun, 18 Oct 2026 22:21:55 GMT</pubDate>
+    </item>
+    <item>
+      <title>Search across the website</title>
+      <link>https://francescomaiale.github.io/updates/#site-search-2026-10-18</link>
+      <guid isPermaLink="true">https://francescomaiale.github.io/updates/#site-search-2026-10-18</guid>
+      <description>&lt;p&gt;Find papers, lecture notes, research explainers, talks, and software by title, author, or keyword. Talk entries now bring together abstracts, related papers, and other resources.&lt;/p&gt;&lt;p&gt;&lt;a href="https://francescomaiale.github.io/search/"&gt;Explore this update&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Website</category>
+      <pubDate>Sun, 18 Oct 2026 21:58:21 GMT</pubDate>
+    </item>
+    <item>
+      <title>A richer notes library and a home for research code</title>
+      <link>https://francescomaiale.github.io/updates/#notes-software-2026-10-18</link>
+      <guid isPermaLink="true">https://francescomaiale.github.io/updates/#notes-software-2026-10-18</guid>
+      <description>&lt;p&gt;The notes library now includes reading paths, suggested background, and PDF previews. A new Software &amp;amp; Code page collects MATLAB algorithms, lecture-note sources, and the ArxivLens Mac prototype.&lt;/p&gt;&lt;p&gt;&lt;a href="https://francescomaiale.github.io/software/"&gt;Explore this update&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Resources</category>
+      <pubDate>Sun, 18 Oct 2026 21:26:31 GMT</pubDate>
+    </item>
+    <item>
+      <title>Three interactive ways into the research</title>
+      <link>https://francescomaiale.github.io/updates/#interactive-explainers-2026-10-18</link>
+      <guid isPermaLink="true">https://francescomaiale.github.io/updates/#interactive-explainers-2026-10-18</guid>
+      <description>&lt;p&gt;Explore the lower spectral radius, tangent paraboloids, and optimal reinforcements through research explainers with interactive diagrams and links to the papers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://francescomaiale.github.io/#research-explained"&gt;Explore this update&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Research explained</category>
+      <pubDate>Sun, 18 Oct 2026 20:58:26 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
