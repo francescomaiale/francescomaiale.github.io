@@ -41,6 +41,8 @@
 .software-start .software-caution{font-size:.8125rem;margin:0}
 .software-projects{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
 .software-project{border-top:1px solid var(--line);padding-top:1.6rem;display:flex;flex-direction:column;align-items:start}
+.software-project-wide{grid-column:1 / -1}
+.software-project-wide p:not(.topic){max-width:50rem}
 .software-project h3{font-size:2.1rem}
 .software-project p:not(.topic){font-size:1rem;color:var(--muted);margin-top:1rem}
 .software-project .resource-links{margin-top:auto;padding-top:.5rem}
