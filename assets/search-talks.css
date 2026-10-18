@@ -1,0 +1,29 @@
+/* Site-wide discovery and talk resources, using the shared academic palette. */
+.search-hero{padding-block:3rem 2.5rem;gap:3rem}
+.search-hero h1{font-size:clamp(2.5rem,4.5vw,3.7rem)}
+.search-hero .page-description{font-size:1.1rem}
+.site-search.section{padding-top:2rem}
+.search-heading{font-size:2.5rem;margin-bottom:1.8rem}
+.site-search-form{display:grid;grid-template-columns:minmax(0,2fr) minmax(12rem,1fr) auto;gap:1rem;align-items:end;background:#edf1e9;border:1px solid var(--line);border-radius:4px;padding:1.35rem;margin-bottom:1.3rem}
+.site-search-form label{display:flex;flex-direction:column;gap:.55rem;font-size:.8125rem;font-weight:600;line-height:1.4;min-width:0}
+.site-search-form input,.site-search-form select{width:100%;min-height:46px;font:inherit;font-size:1rem;font-weight:400;color:var(--ink);border:1px solid #abb9ab;border-radius:3px;background:#fff;padding:.65rem .7rem}
+.site-search-form input:focus-visible,.site-search-form select:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.site-search-result{display:grid;grid-template-columns:9rem minmax(0,1fr);gap:.55rem 2rem;padding-block:1.7rem;border-bottom:1px solid var(--line)}
+.site-search-result>.topic{grid-row:1/4;line-height:1.5;margin:0;padding-top:.3rem}
+.site-search-result h3{font-size:1.7rem;line-height:1.3;margin:0;text-wrap:balance}
+.site-search-result h3 a{text-decoration:none}
+.site-search-result h3 a:hover{text-decoration:underline}
+.site-search-result h3 a:focus-visible{outline-offset:4px}
+.search-result-meta{grid-column:2;font-size:.875rem;line-height:1.6;color:var(--muted);margin:0}
+.search-result-description{grid-column:2;font-size:1rem;line-height:1.65;color:var(--muted);margin:0;max-width:58rem}
+.featured-talk .featured-talk-summary{font-size:1rem;line-height:1.75;margin-top:1.5rem;margin-bottom:0;max-width:44rem}
+.featured-talk .talk-topic{font-size:.8125rem!important;color:#d0ded5;margin-bottom:1.1rem}
+.featured-talk .talk-resources{gap:.6rem 1.2rem}
+.talk-resources a{display:inline-flex;align-items:center;min-height:44px}
+.talk-entry .topic{font-size:.8125rem;margin:0 0 .7rem;color:var(--accent)}
+.talk-entry .talk-event{font-size:.9375rem;margin-top:.75rem;color:var(--green)}
+.talk-entry .talk-summary{font-size:1rem;line-height:1.75;max-width:54rem;margin-block:1rem .7rem}
+.talk-entry .talk-resources{margin-top:.65rem}
+.talk-entry h3{max-width:54rem;line-height:1.3}
+@media(max-width:850px){.site-search-form{grid-template-columns:minmax(0,1.6fr) minmax(10rem,1fr)}.site-search-form .reset-button{grid-column:1/-1;justify-self:start}.site-search-result{grid-template-columns:7rem minmax(0,1fr);gap:.5rem 1.3rem}.featured-talk .featured-talk-summary{margin-top:1rem}.featured-talk .talk-resources{max-width:42rem}}
+@media(max-width:600px){.search-hero{padding-block:2rem 1.3rem;gap:1.2rem}.search-hero h1{font-size:2.5rem}.search-hero .page-description{font-size:1rem}.search-hero .page-aside{padding-top:1rem}.search-hero .page-aside .eyebrow{margin-bottom:.55rem}.search-hero .aside-links{gap:.7rem 1rem;font-size:.875rem}.search-heading{font-size:2.1rem}.site-search-form{grid-template-columns:1fr;padding:1rem}.site-search-form .reset-button{grid-column:auto}.site-search-result{grid-template-columns:1fr;gap:.55rem;padding-block:1.4rem}.site-search-result>.topic{grid-row:auto;padding-top:0}.search-result-meta,.search-result-description{grid-column:auto}.site-search-result h3{font-size:1.5rem}.talk-entry h3{font-size:1.65rem}.talk-resources{gap:.4rem 1.3rem}.featured-talk .featured-talk-summary{font-size:.9375rem}}
