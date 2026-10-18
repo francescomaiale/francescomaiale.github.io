@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" role="img" aria-labelledby="reinforcement-title reinforcement-desc">
+  <title id="reinforcement-title">Three admissible reinforcement layouts with the same length</title>
+  <desc id="reinforcement-desc">Three separate square membranes, each with domain Omega equal to (0,1) squared, the same material coefficient m, length budget L equal to one, and unit density theta equal to one. Copper lines are reinforcement centerlines; their displayed width is schematic. The straight layout is the segment from (0, one half) to (1, one half), of length one; only its endpoints touch the outer boundary. The bent layout joins (one quarter, one quarter), (three quarters, one quarter), and (three quarters, three quarters), with two legs of length one half. The branched layout is the union of the horizontal segment from (one quarter, one half) to (three quarters, one half) and the vertical segment from (one half, one quarter) to (one half, three quarters); each segment has length one half and their single intersection has zero length. Every layout is closed, connected, rectifiable, and contained in the closed square, with total length one. The outer square boundary is fixed. The reinforcement adds tangential energy along its centerline; it does not impose zero displacement at interior points. These are schematic admissible competitors, with no computed optimum or performance ranking.</desc>
+  <rect width="1000" height="560" fill="#f8f8f3"/>
+  <text x="50" y="57" fill="#163d30" font-family="Georgia, 'Times New Roman', serif" font-size="38">Same material. Different layouts.</text>
+  <text x="50" y="111" fill="#56665e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="28">Ω = (0, 1)² in each panel · fixed m · θ = 1</text>
+  <g fill="#ffffff" fill-opacity="0.55">
+    <rect x="50" y="155" width="250" height="250"/>
+    <rect x="375" y="155" width="250" height="250"/>
+    <rect x="700" y="155" width="250" height="250"/>
+  </g>
+  <g fill="none" stroke="#98421f" stroke-width="8" stroke-linejoin="round">
+    <path d="M50 280H300" stroke-linecap="butt"/>
+    <path d="M437.5 342.5H562.5V217.5" stroke-linecap="round"/>
+    <path d="M762.5 280H887.5M825 342.5V217.5" stroke-linecap="round"/>
+  </g>
+  <g fill="none" stroke="#163d30" stroke-width="2">
+    <rect x="50" y="155" width="250" height="250"/>
+    <rect x="375" y="155" width="250" height="250"/>
+    <rect x="700" y="155" width="250" height="250"/>
+  </g>
+  <g fill="#163d30" font-family="Georgia, 'Times New Roman', serif" font-size="32" text-anchor="middle">
+    <text x="175" y="449">Straight</text>
+    <text x="500" y="449">Bent</text>
+    <text x="825" y="449">Branched</text>
+  </g>
+  <g fill="#56665e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="28" text-anchor="middle">
+    <text x="175" y="488">Length = 1</text>
+    <text x="500" y="488">Length = 1</text>
+    <text x="825" y="488">Length = 1</text>
+  </g>
+  <path d="M50 514H950" stroke="#d2d8ce" stroke-width="1"/>
+  <text x="500" y="548" text-anchor="middle" fill="#56665e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="26">Schematic competitors · no optimal layout is asserted</text>
+</svg>
