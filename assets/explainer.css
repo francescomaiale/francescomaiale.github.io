@@ -51,6 +51,13 @@
 .reading-results h3{font-size:1.6rem;margin-bottom:.8rem}
 .reading-results p{font-size:1rem;color:var(--muted);margin-bottom:0}
 .reading-results p+p{margin-top:.8rem}
+.result-table-scroll{overflow-x:auto;margin-block:1.3rem}
+.result-table-scroll:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.solver-results{min-width:22rem;font-size:.9375rem}
+.solver-results tbody th{font-family:var(--sans);font-size:.9375rem;line-height:1.4}
+.solver-results small{display:block;font-size:.75rem;color:var(--muted);margin-top:.25rem}
+.solver-results th,.solver-results td{padding:.7rem .4rem}
+.solver-results tr:last-child th,.solver-results tr:last-child td{color:var(--ink);border-bottom:1px solid var(--line)}
 .source-map{font-size:.9375rem;line-height:1.7;padding-left:1.2rem;overflow-wrap:anywhere}
 .source-map li{margin-block:.8rem}
 .source-map a{display:inline-block;min-height:30px}
