@@ -11,8 +11,8 @@
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="The lower spectral radius, explained — Francesco Paolo Maiale"><meta name="twitter:description" content="How slowly can a matrix family grow? An introduction to the lower spectral radius, our Gripenberg-like algorithm, and its MATLAB implementation."><meta name="twitter:image" content="https://francescomaiale.github.io/assets/social/social-card.png">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://francescomaiale.github.io/#person", "name": "Francesco Paolo Maiale", "url": "https://francescomaiale.github.io/", "jobTitle": "Postdoctoral researcher in Mathematics", "affiliation": {"@type": "CollegeOrUniversity", "name": "Gran Sasso Science Institute"}, "sameAs": ["https://orcid.org/0000-0002-3389-6937", "https://arxiv.org/a/maiale_f_1.html", "https://scholar.google.com/citations?user=3OeFV2oAAAAJ", "https://github.com/francescomaiale"]}, {"@type": "WebSite", "@id": "https://francescomaiale.github.io/#website", "name": "Francesco Paolo Maiale", "url": "https://francescomaiale.github.io/", "publisher": {"@id": "https://francescomaiale.github.io/#person"}}, {"@type": "Article", "@id": "https://francescomaiale.github.io/research/lower-spectral-radius/", "url": "https://francescomaiale.github.io/research/lower-spectral-radius/", "name": "The lower spectral radius, explained — Francesco Paolo Maiale", "description": "How slowly can a matrix family grow? An introduction to the lower spectral radius, our Gripenberg-like algorithm, and its MATLAB implementation.", "isPartOf": {"@id": "https://francescomaiale.github.io/#website"}, "about": {"@id": "https://francescomaiale.github.io/#person"}, "author": {"@id": "https://francescomaiale.github.io/#person"}, "datePublished": "2026-10-18", "headline": "Finding the slowest growth in a matrix family", "citation": "https://doi.org/10.1137/24M1672456", "image": "https://francescomaiale.github.io/assets/research/lower-spectral-radius.svg"}]}</script>
 <!-- discovery:end -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23163d30'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='40' fill='%23f8f8f3'%3Em%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/catalogue.css"><link rel="stylesheet" href="/assets/explainer.css?v=181d6b5">
-</head><body>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23163d30'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='40' fill='%23f8f8f3'%3Em%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/catalogue.css"><link rel="stylesheet" href="/assets/explainer.css?v=181d6b5"><link rel="stylesheet" href="/assets/interactive-diagrams.css?v=20261018">
+<script src="/assets/interactive-diagrams.js?v=20261018" defer></script></head><body>
 <a class="skip-link" href="#main">Skip to content</a><header class="site-header wrap">
 <a class="wordmark" href="/" aria-label="Francesco Paolo Maiale, homepage">F. P. Maiale<span>Mathematics</span></a>
 <nav class="desktop-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/research/" aria-current="true">Research</a><a href="/teaching/">Teaching &amp; Notes</a><a href="/activities/">Talks &amp; Activities</a><a href="/arxivlens/">ArxivLens</a><a href="/about/">About &amp; CV</a></nav>
@@ -26,7 +26,69 @@
 <p class="explainer-byline">Francesco Paolo Maiale · Based on joint work with Nicola Guglielmi</p>
 <div class="actions"><a class="button" href="https://arxiv.org/abs/2409.16822">Read the paper</a><a class="text-link" href="https://github.com/francescomaiale/subradius_computation/tree/181d6b59be56a02dab1a040254b95c905d7f49ae">Explore the MATLAB code ↗</a><a class="text-link" href="#try-the-code">Try the example ↓</a></div>
 </header>
-<figure class="explainer-figure wrap"><img src="/assets/research/lower-spectral-radius.svg" width="1000" height="520" alt="Starting from the identity, choosing A or B at each step gives the four words AA, AB, BA, and BB after two steps. AB is highlighted only as an example."><figcaption>A conceptual illustration: two choices give 2<sup>k</sup> product words at length <i>k</i>. Different words may represent the same matrix; the highlighted path makes no optimality claim.</figcaption></figure>
+<figure class="explainer-figure wrap" id="interactive-diagram" aria-label="Research diagram"><div class="interactive-diagram" data-interactive="lower-spectral-radius" hidden>
+  <div class="diagram-heading">
+    <h2 class="diagram-title">Try a repeating matrix word</h2>
+  </div>
+  <p class="diagram-caption">Choose a finite word, then consider repeating that whole word indefinitely. Switching matrices can give a smaller growth factor than repeating either matrix alone.</p>
+  <div class="diagram-controls" role="group" aria-label="Example matrix words">
+    <button class="diagram-control" type="button" data-lsr-preset="one">Repeat A₁</button>
+    <button class="diagram-control" type="button" data-lsr-preset="two">Repeat A₂</button>
+    <button class="diagram-control" type="button" data-lsr-preset="mixed">Paper’s mixed word · 8 choices</button>
+  </div>
+  <p class="diagram-hint" id="lsr-word-convention">Read products from left to right: P = A₁ · A₂ means exactly that product. Appending a choice multiplies P on the right. Explore up to 10 choices; the empty word is the identity.</p>
+  <div class="diagram-actions" role="group" aria-label="Build your matrix word" aria-describedby="lsr-word-convention">
+    <button class="diagram-control" type="button" data-lsr-action="append-one">Append A₁</button>
+    <button class="diagram-control" type="button" data-lsr-action="append-two">Append A₂</button>
+    <button class="diagram-control" type="button" data-lsr-action="undo" disabled>Undo</button>
+    <button class="diagram-reset" type="button" data-lsr-action="reset">Reset</button>
+  </div>
+  <div class="diagram-stage">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width="1000" height="450" role="img" aria-labelledby="lsr-branch-title lsr-branch-description">
+      <title id="lsr-branch-title">A matrix word branches into two possible next choices</title>
+      <desc id="lsr-branch-description" data-lsr-svg-description="">The current word starts at the identity. Appending A₁ or A₂ gives a candidate repeated-word growth factor. All values are also shown as text below.</desc>
+      <defs><marker id="lsr-branch-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#98421f"/></marker></defs>
+      <rect width="1000" height="450" rx="16" fill="#f8f8f3"/>
+      <g fill="none" stroke="#98421f" stroke-width="3" marker-end="url(#lsr-branch-arrow)">
+        <path d="M500 174L250 267"/>
+        <path d="M500 174L750 267"/>
+      </g>
+      <g fill="#ffffff" stroke="#163d30" stroke-width="2">
+        <rect x="260" y="20" width="480" height="152" rx="16"/>
+        <rect x="40" y="274" width="420" height="142" rx="16"/>
+        <rect x="540" y="274" width="420" height="142" rx="16"/>
+      </g>
+      <g text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif">
+        <text x="500" y="59" fill="#98421f" font-size="27" font-weight="600" data-lsr-svg-length="">Current word · 0 choices</text>
+        <text x="500" y="101" fill="#163d30" font-family="Georgia, 'Times New Roman', serif" font-size="30" data-lsr-svg-word="">P = I</text>
+        <text x="500" y="145" fill="#98421f" font-size="28" data-lsr-svg-current="">Growth per step: —</text>
+        <text x="250" y="313" fill="#163d30" font-size="30">P · A₁</text>
+        <text x="750" y="313" fill="#163d30" font-size="30">P · A₂</text>
+        <text x="250" y="358" fill="#98421f" font-size="34" data-lsr-svg-next-one="">7</text>
+        <text x="750" y="358" fill="#98421f" font-size="34" data-lsr-svg-next-two="">8</text>
+        <text x="250" y="394" fill="#56665e" font-size="25" data-lsr-svg-next-one-caption="">Growth per step · length 1</text>
+        <text x="750" y="394" fill="#56665e" font-size="25" data-lsr-svg-next-two-caption="">Growth per step · length 1</text>
+      </g>
+    </svg>
+  </div>
+  <dl class="diagram-readouts">
+    <div class="diagram-readout"><dt>Current word</dt><dd class="diagram-value" data-lsr-word>Identity · no choices yet</dd></div>
+    <div class="diagram-readout"><dt>Repeated-word growth per step</dt><dd class="diagram-value" data-lsr-rate>—</dd></div>
+    <div class="diagram-readout"><dt>Word length k</dt><dd class="diagram-value" data-lsr-length>0 / 10</dd></div>
+    <div class="diagram-readout"><dt>All possible words at length k</dt><dd class="diagram-value" data-lsr-word-count>1</dd></div>
+    <div class="diagram-readout"><dt>If A₁ is appended</dt><dd class="diagram-value" data-lsr-next-one>7</dd></div>
+    <div class="diagram-readout"><dt>If A₂ is appended</dt><dd class="diagram-value" data-lsr-next-two>8</dd></div>
+  </dl>
+  <details class="diagram-caption">
+    <summary>Show the current product matrix P</summary>
+    <p>A₁ has rows (7, 0), (2, 3); A₂ has rows (2, 4), (0, 8).</p>
+    <p>P = <span class="matrix" role="img" aria-label="Identity matrix, with rows 1, 0 and 0, 1" data-lsr-matrix><span data-lsr-entry="0">1</span><span data-lsr-entry="1">0</span><span data-lsr-entry="2">0</span><span data-lsr-entry="3">1</span></span></p>
+  </details>
+  <p class="diagram-caption">For a nonempty word of length k, the displayed value is ρ(P)<sup>1/k</sup>, the asymptotic growth factor when that word is repeated. This formula gives an <strong>upper bound on the lower spectral radius</strong>. We evaluate one candidate at a time; this does not minimize over all words or prove an optimum or lower bound. Values are rounded floating-point calculations.</p>
+  <p class="diagram-hint">This explores periodic words. It does not run the paper’s MATLAB search algorithm.</p>
+  <p class="diagram-hint" data-lsr-status role="status" aria-live="polite" aria-atomic="true"></p>
+</div>
+<img data-diagram-fallback src="/assets/research/lower-spectral-radius.svg" width="1000" height="520" alt="Starting from the identity, choosing A or B at each step gives the four words AA, AB, BA, and BB after two steps. AB is highlighted only as an example."><figcaption data-diagram-fallback>A conceptual illustration: two choices give 2<sup>k</sup> product words at length <i>k</i>. Different words may represent the same matrix; the highlighted path makes no optimality claim.</figcaption></figure>
 <section class="section wrap explainer-section" id="the-question"><div><p class="eyebrow">01 · The question</p><h2>One matrix is<br> only the beginning.</h2></div><div class="explainer-prose">
 <p>A matrix describes a linear update. A sequence of updates becomes a matrix product, and its order matters. The lower spectral radius measures the smallest asymptotic growth per step over all choices of these updates.</p>
 <div class="worked-example"><p class="eyebrow">A concrete example</p><p>The pair in <a href="https://arxiv.org/html/2409.16822v1#S5.SS1">§5.1 of the paper</a> is</p>
