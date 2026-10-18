@@ -11,8 +11,8 @@
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Where should a reinforcement go? — Francesco Paolo Maiale"><meta name="twitter:description" content="A fixed material budget, a vibrating membrane, and the search for a better reinforcement: an introduction to joint work with Giuseppe Buttazzo on eigenvalue optimization."><meta name="twitter:image" content="https://francescomaiale.github.io/assets/social/social-card.png">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://francescomaiale.github.io/#person", "name": "Francesco Paolo Maiale", "url": "https://francescomaiale.github.io/", "jobTitle": "Postdoctoral researcher in Mathematics", "affiliation": {"@type": "CollegeOrUniversity", "name": "Gran Sasso Science Institute"}, "sameAs": ["https://orcid.org/0000-0002-3389-6937", "https://arxiv.org/a/maiale_f_1.html", "https://scholar.google.com/citations?user=3OeFV2oAAAAJ", "https://github.com/francescomaiale"]}, {"@type": "WebSite", "@id": "https://francescomaiale.github.io/#website", "name": "Francesco Paolo Maiale", "url": "https://francescomaiale.github.io/", "publisher": {"@id": "https://francescomaiale.github.io/#person"}}, {"@type": "Article", "@id": "https://francescomaiale.github.io/research/optimal-reinforcements/", "url": "https://francescomaiale.github.io/research/optimal-reinforcements/", "name": "Where should a reinforcement go? — Francesco Paolo Maiale", "description": "A fixed material budget, a vibrating membrane, and the search for a better reinforcement: an introduction to joint work with Giuseppe Buttazzo on eigenvalue optimization.", "isPartOf": {"@id": "https://francescomaiale.github.io/#website"}, "about": {"@id": "https://francescomaiale.github.io/#person"}, "author": {"@id": "https://francescomaiale.github.io/#person"}, "datePublished": "2026-10-18", "headline": "Where should a reinforcement go?", "citation": "https://doi.org/10.1016/j.na.2019.111627", "image": "https://francescomaiale.github.io/assets/research/optimal-reinforcements.svg"}]}</script>
 <!-- discovery:end -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23163d30'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='40' fill='%23f8f8f3'%3Em%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/catalogue.css"><link rel="stylesheet" href="/assets/explainer.css?v=geometry-20261018">
-</head><body>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23163d30'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='40' fill='%23f8f8f3'%3Em%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/catalogue.css"><link rel="stylesheet" href="/assets/explainer.css?v=geometry-20261018"><link rel="stylesheet" href="/assets/interactive-diagrams.css?v=20261018">
+<script src="/assets/interactive-diagrams.js?v=20261018" defer></script></head><body>
 <a class="skip-link" href="#main">Skip to content</a><header class="site-header wrap">
 <a class="wordmark" href="/" aria-label="Francesco Paolo Maiale, homepage">F. P. Maiale<span>Mathematics</span></a>
 <nav class="desktop-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/research/" aria-current="true">Research</a><a href="/teaching/">Teaching &amp; Notes</a><a href="/activities/">Talks &amp; Activities</a><a href="/arxivlens/">ArxivLens</a><a href="/about/">About &amp; CV</a></nav>
@@ -26,7 +26,49 @@
 <p class="explainer-byline">Francesco Paolo Maiale · Based on joint work with Giuseppe Buttazzo</p>
 <div class="actions"><a class="button" href="https://arxiv.org/abs/2007.05725">Read the paper</a><a class="text-link" href="#the-idea">Explore the idea ↓</a><a class="text-link" href="#the-result">The result ↓</a></div>
 </header>
-<figure class="explainer-figure wrap"><img src="/assets/research/optimal-reinforcements.svg" width="1000" height="560" alt="Three separate unit-square membranes contain a straight, bent, or branched reinforcement. Each layout is connected and has total length one. These are admissible competitors, with no claim that one is optimal."><figcaption>Three candidate designs with the same length budget and material coefficient. Each square is a separate membrane. The outer boundary is fixed; the reinforcement adds stiffness along its direction. These schematics show neither computed eigenvalues nor an optimal layout.</figcaption></figure>
+<figure class="explainer-figure wrap" id="interactive-diagram" aria-label="Research diagram"><div class="interactive-diagram" data-interactive="optimal-reinforcements" hidden>
+  <div class="diagram-heading">
+    <div><p class="eyebrow">Explore a competitor</p><h2 class="diagram-title">Same length. Different placement.</h2></div>
+    <button class="diagram-reset" type="button" data-reinforcement-reset>Reset</button>
+  </div>
+  <div class="diagram-controls">
+    <label class="diagram-control" for="reinforcement-layout"><span>Layout</span><select id="reinforcement-layout" data-reinforcement-layout><option value="straight">Straight segment</option><option value="bent">Bent path</option><option value="cross">Cross: four branches</option></select></label>
+    <label class="diagram-control" for="reinforcement-rotation"><span>Rotation <output for="reinforcement-rotation" data-reinforcement-angle>0°</output></span><input id="reinforcement-rotation" data-reinforcement-rotation type="range" min="0" max="360" step="15" value="0"></label>
+    <label class="diagram-control" for="reinforcement-x"><span>Horizontal placement <output for="reinforcement-x" data-reinforcement-x-value>Fixed</output></span><input id="reinforcement-x" data-reinforcement-x type="range" min="0" max="100" step="1" value="50" aria-describedby="reinforcement-position-hint"></label>
+    <label class="diagram-control" for="reinforcement-y"><span>Vertical placement <output for="reinforcement-y" data-reinforcement-y-value>50%</output></span><input id="reinforcement-y" data-reinforcement-y type="range" min="0" max="100" step="1" value="50" aria-describedby="reinforcement-position-hint"></label>
+  </div>
+  <p class="diagram-hint" id="reinforcement-position-hint" data-reinforcement-position-hint>Position sliders cover the space left after rotation, keeping the design in the closed unit square.</p>
+  <div class="diagram-stage">
+    <svg viewBox="0 0 1000 500" width="1000" height="500" role="img" aria-labelledby="reinforcement-svg-title reinforcement-svg-description" data-reinforcement-svg xmlns="http://www.w3.org/2000/svg">
+      <title id="reinforcement-svg-title" data-reinforcement-svg-title>A unit-length reinforcement in a fixed square</title>
+      <desc id="reinforcement-svg-description" data-reinforcement-svg-description>Choose a connected reinforcement, then rotate or move it within the closed unit square. The diagram computes geometry only.</desc>
+      <rect width="1000" height="500" fill="#f8f8f3"/>
+      <g stroke="#56665e" stroke-width="1" opacity=".18" aria-hidden="true">
+        <path d="M200 40V440 M300 40V440 M400 40V440 M100 140H500 M100 240H500 M100 340H500"/>
+      </g>
+      <rect x="100" y="40" width="400" height="400" fill="none" stroke="#163d30" stroke-width="2.5"/>
+      <g fill="#56665e" font-family="system-ui,sans-serif" font-size="22" aria-hidden="true"><text x="94" y="472">0</text><text x="493" y="472">1</text><text x="68" y="448">0</text><text x="68" y="48">1</text><text x="295" y="492">x</text><text x="40" y="246">y</text></g>
+      <g data-reinforcement-paths fill="none" stroke="#98421f" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+      <g data-reinforcement-legend font-family="system-ui,sans-serif" aria-hidden="true">
+        <text x="620" y="110" fill="#163d30" font-size="34">One design at a time.</text>
+        <path d="M620 163H675" fill="none" stroke="#163d30" stroke-width="2.5"/>
+        <text x="695" y="171" fill="#56665e" font-size="23">Fixed outer boundary</text>
+        <path d="M620 218H675" fill="none" stroke="#98421f" stroke-width="9" stroke-linecap="round"/>
+        <text x="695" y="226" fill="#56665e" font-size="23">Selected reinforcement</text>
+        <text x="620" y="305" fill="#163d30" font-size="25">Length 1 · density θ = 1</text>
+        <text x="620" y="348" fill="#56665e" font-size="23">Material coefficient m stays fixed.</text>
+        <text x="620" y="396" fill="#98421f" font-size="23"><tspan x="620">No eigenvalue or ranking</tspan><tspan x="620" dy="32">is computed.</tspan></text>
+      </g>
+    </svg>
+  </div>
+  <div class="diagram-readouts">
+    <div class="diagram-readout"><span>Total length</span><strong class="diagram-value" data-reinforcement-length>1 unit</strong></div>
+    <div class="diagram-readout"><span>Connected</span><strong class="diagram-value">Yes</strong></div>
+    <div class="diagram-readout"><span>Uniform density θ</span><strong class="diagram-value">1</strong></div>
+  </div>
+  <p class="diagram-caption">Explore admissible competitors with the same length budget, uniform density and fixed material coefficient. This is not a computed optimum or eigenvalue. The reinforcement adds finite tangential stiffness; it is not an internal clamp.</p>
+</div>
+<img data-diagram-fallback src="/assets/research/optimal-reinforcements.svg" width="1000" height="560" alt="Three separate unit-square membranes contain a straight, bent, or branched reinforcement. Each layout is connected and has total length one. These are admissible competitors, with no claim that one is optimal."><figcaption data-diagram-fallback>Three candidate designs with the same length budget and material coefficient. Each square is a separate membrane. The outer boundary is fixed; the reinforcement adds stiffness along its direction. These schematics show neither computed eigenvalues nor an optimal layout.</figcaption></figure>
 <section class="section wrap explainer-section" id="the-question"><div><p class="eyebrow">01 · The design problem</p><h2>A fixed budget.<br> A moving design.</h2></div><div class="explainer-prose">
 <p>Imagine a thin membrane held fixed around its outer edge. We can reinforce it with a slender structure: perhaps a segment, a bent path, or a network. The available material is limited, so placement matters.</p>
 <p>Our paper uses the <em>first eigenvalue</em>, λ<sub>1</sub>, to measure performance. In the normalized vibration model, it is the square of the fundamental angular frequency. In the corresponding heat-conduction model, it sets the slowest exponential decay rate. The design objective is to make λ<sub>1</sub> as large as possible.</p>
