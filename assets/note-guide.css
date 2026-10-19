@@ -35,3 +35,10 @@
 .guide-next .actions{margin-top:1.6rem}
 @media(max-width:850px){.guide-preparation,.guide-next{grid-template-columns:1fr;gap:2rem}.guide-route{gap:2rem}.guide-start{max-width:42rem}.guide-page-jumps{flex-direction:row;flex-wrap:wrap;gap:1rem}.guide-hero .page-aside{padding-top:1.5rem}}
 @media(max-width:600px){.guide-route{grid-template-columns:1fr}.guide-hero{padding-top:1.5rem}.guide-preparation h2,.guide-next h2{font-size:2.2rem}.guide-route h3{font-size:1.7rem}.guide-start{padding:1.3rem}.guide-breadcrumb{font-size:.8125rem}.page-hero.guide-hero h1{font-size:2.7rem}}
+
+.guide-availability{font-size:.9375rem;line-height:1.6;color:var(--accent);border-left:2px solid var(--accent);padding-left:1rem;max-width:42rem}
+.guide-hero>div,.guide-hero .page-aside{min-width:0}
+.guide-hero h1{overflow-wrap:break-word}
+.guide-supplements{padding-bottom:4rem}
+
+@media(max-width:600px){.page-hero.guide-hero h1{font-size:clamp(2rem,8.4vw,2.7rem)}}
