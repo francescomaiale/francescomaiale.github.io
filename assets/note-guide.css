@@ -1,0 +1,37 @@
+/* Companion reading pages for the lecture-note collection. */
+.guide-breadcrumb{display:flex;flex-wrap:wrap;gap:.5rem;font-size:.875rem;line-height:1.6;padding-top:1.5rem;color:var(--muted)}
+.guide-hero{padding-top:2rem}
+.guide-hero .page-description{max-width:42rem}
+.guide-credit{font-size:1rem;line-height:1.7;color:var(--muted);margin-top:1.4rem;max-width:42rem}
+.guide-credit strong{color:var(--ink);font-weight:500}
+.guide-pdf-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-block:1rem}
+.guide-pdf-actions a{display:inline-flex;align-items:center;min-height:44px;font-size:.9375rem}
+.guide-pdf-actions .button,.guide-pdf-actions .preview-button{min-height:44px}
+.guide-pdf-actions .preview-button{font-size:.9375rem}
+.guide-page-jumps{display:flex;flex-direction:column;gap:.7rem;font-size:.875rem;line-height:1.5;margin-top:1.6rem}
+.guide-preparation,.guide-next{display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+.guide-preparation h2{font-size:2.6rem}
+.guide-preparation p:not(.eyebrow){color:var(--muted);margin-top:1.1rem;font-size:1rem}
+.guide-start{padding:1.6rem 1.8rem;background:#edf1e9;border:1px solid var(--line);border-radius:4px}
+.guide-start h3{font-size:1.7rem}
+.guide-start .guide-editorial{font-size:.8125rem;line-height:1.6;margin-bottom:0}
+.guide-route{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem 3rem;list-style:none;counter-reset:guide-steps;margin:0;padding:0}
+.guide-route>li{counter-increment:guide-steps;border-top:1px solid var(--line);padding-top:1.4rem;min-width:0}
+.guide-route>li::before{content:'0' counter(guide-steps);display:block;color:var(--accent);font-size:.875rem;margin-bottom:1rem}
+.guide-route h3{font-size:1.9rem;line-height:1.2}
+.guide-route p:not(.topic){font-size:1rem;color:var(--muted);margin-top:1rem}
+.guide-focus{margin-bottom:0}
+.guide-focus strong{display:block;color:var(--green);font-size:.75rem;text-transform:uppercase;letter-spacing:.035em;margin-bottom:.3rem}
+.guide-follow-on{margin:2rem 0 0;font-size:1rem;color:var(--muted);max-width:53rem}
+.guide-questions>p{font-size:1rem;color:var(--muted)}
+.guide-questions details{border-top:1px solid var(--line);padding:1.15rem 0;max-width:55rem}
+.guide-questions details:last-child{border-bottom:1px solid var(--line)}
+.guide-questions summary{font-size:1.0625rem;line-height:1.6;cursor:pointer;padding-right:.5rem}
+.guide-questions details p{font-size:1rem;line-height:1.7;margin:1rem 0 0;color:var(--muted)}
+.guide-reading-note summary{color:var(--accent);font-size:.9375rem}
+.guide-math{font-family:var(--serif);white-space:nowrap;color:var(--ink)}
+.guide-next h2{font-size:2.6rem}
+.guide-next p{font-size:1rem;line-height:1.65}
+.guide-next .actions{margin-top:1.6rem}
+@media(max-width:850px){.guide-preparation,.guide-next{grid-template-columns:1fr;gap:2rem}.guide-route{gap:2rem}.guide-start{max-width:42rem}.guide-page-jumps{flex-direction:row;flex-wrap:wrap;gap:1rem}.guide-hero .page-aside{padding-top:1.5rem}}
+@media(max-width:600px){.guide-route{grid-template-columns:1fr}.guide-hero{padding-top:1.5rem}.guide-preparation h2,.guide-next h2{font-size:2.2rem}.guide-route h3{font-size:1.7rem}.guide-start{padding:1.3rem}.guide-breadcrumb{font-size:.8125rem}.page-hero.guide-hero h1{font-size:2.7rem}}
