@@ -42,3 +42,18 @@
 .guide-supplements{padding-bottom:4rem}
 
 @media(max-width:600px){.page-hero.guide-hero h1{font-size:clamp(2rem,8.4vw,2.7rem)}}
+
+.guide-research,.guide-correction{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:3rem}
+.guide-research h2,.guide-correction h2{font-size:2.6rem}
+.guide-research p,.guide-correction p{font-size:1rem;line-height:1.75;color:var(--muted)}
+.guide-research .guide-paper{font-size:.875rem}
+.guide-research-image{display:block;align-self:center;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.guide-research-image img{display:block;width:100%;height:auto}
+.guide-correction{border-top:1px solid var(--line)}
+.guide-correction>div{min-width:0}
+.guide-correction .button{min-height:44px}
+.guide-correction .guide-correction-hint{font-size:.875rem;margin-top:1rem}
+.guide-correction summary{cursor:pointer;min-height:44px;padding-block:.5rem;line-height:1.6}
+.guide-correction-template{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;font-size:.8125rem;line-height:1.7;background:#edf1e9;padding:1rem;border:1px solid var(--line);border-radius:4px;user-select:text}
+@media(max-width:850px){.guide-research,.guide-correction{grid-template-columns:1fr;gap:1.5rem}.guide-research-image{max-width:42rem}}
+@media(max-width:600px){.guide-research h2,.guide-correction h2{font-size:2.2rem}}
