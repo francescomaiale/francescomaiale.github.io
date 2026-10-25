@@ -7,6 +7,13 @@
     <language>en</language>
     <atom:link href="https://francescomaiale.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>A visual map of my research</title>
+      <link>https://francescomaiale.github.io/updates/#visual-research-map-2026-10-25</link>
+      <guid isPermaLink="true">https://francescomaiale.github.io/updates/#visual-research-map-2026-10-25</guid>
+      <description>&lt;p&gt;Explore the connections between variational problems, geometric analysis, PDEs and transport, and computation. Each area brings together papers, explainers, reading guides, and related code or talks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://francescomaiale.github.io/research/map/"&gt;Explore this update&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Research</category>
+    </item>
+    <item>
       <title>From lecture notes to research</title>
       <link>https://francescomaiale.github.io/updates/#notes-corrections-research-2026-10-21</link>
       <guid isPermaLink="true">https://francescomaiale.github.io/updates/#notes-corrections-research-2026-10-21</guid>
