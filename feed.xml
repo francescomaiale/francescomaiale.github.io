@@ -7,6 +7,13 @@
     <language>en</language>
     <atom:link href="https://francescomaiale.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Start with a mathematical idea</title>
+      <link>https://francescomaiale.github.io/updates/#concept-index-2026-10-25</link>
+      <guid isPermaLink="true">https://francescomaiale.github.io/updates/#concept-index-2026-10-25</guid>
+      <description>&lt;p&gt;Ten concepts now connect variational methods, PDEs and free boundaries, geometry, and matrix growth to relevant lecture notes, research explainers, papers, and code.&lt;/p&gt;&lt;p&gt;&lt;a href="https://francescomaiale.github.io/research/concepts/"&gt;Explore this update&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Research</category>
+    </item>
+    <item>
       <title>A visual map of my research</title>
       <link>https://francescomaiale.github.io/updates/#visual-research-map-2026-10-25</link>
       <guid isPermaLink="true">https://francescomaiale.github.io/updates/#visual-research-map-2026-10-25</guid>
