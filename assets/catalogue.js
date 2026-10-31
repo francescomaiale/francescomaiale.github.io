@@ -158,7 +158,7 @@
       let visible = 0;
       items.forEach(item => {
         const text = normalise(item.dataset.search);
-        const matches = query.every(word => text.includes(word)) && ['topic', 'year', 'status', 'format'].every(key => !values.get(key) || item.dataset[key] === values.get(key));
+        const matches = query.every(word => text.includes(word)) && ['topic', 'year', 'status', 'format'].every(key => !values.get(key) || (item.dataset[key] === values.get(key) || (key === 'status' && values.get(key) === 'Submitted' && item.dataset.status === 'Preprint')));
         item.hidden = !matches;
         if (matches) visible++;
       });
