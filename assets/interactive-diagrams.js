@@ -1,5 +1,44 @@
 (() => {
   'use strict';
+  const panel = document.querySelector('[data-interactive="euler-brackets"]');
+  if (!panel) return;
+  const find = name => panel.querySelector(`[data-euler-${name}]`);
+  const step = panel.querySelector('#euler-step');
+  const fields = {value:find('step-value'), lower:find('lower-rate'), upper:find('upper-rate'), width:find('width'), error:find('error'), line:find('line'), lowerDot:find('lower'), upperDot:find('upper'), half:find('half'), reset:find('reset'), status:find('status')};
+  if (!step || Object.values(fields).some(node => !node)) return;
+  const format = value => (Math.abs(value) < 0.0000005 ? 0 : value).toFixed(6);
+  function render(message = '') {
+    const h = Number(step.value);
+    if (!Number.isFinite(h) || h < 0.025 || h > 0.8) return;
+    // Rationalized expression avoids cancellation in 1 - sqrt(1 - h*h).
+    const error = h / (1 + Math.sqrt(1 - h*h));
+    const lower = 0.5 - error, upper = 0.5 + error;
+    const x = 90 + 900*h, yLower = 390 - 300*lower, yUpper = 390 - 300*upper;
+    fields.value.textContent = h.toFixed(3);
+    fields.lower.textContent = format(lower);
+    fields.upper.textContent = format(upper);
+    fields.width.textContent = format(2*error);
+    fields.error.textContent = format(error);
+    fields.line.setAttribute('d', `M${x} ${yUpper}V${yLower}`);
+    fields.lowerDot.setAttribute('cx', x); fields.lowerDot.setAttribute('cy', yLower);
+    fields.upperDot.setAttribute('cx', x); fields.upperDot.setAttribute('cy', yUpper);
+    fields.half.disabled = h <= 0.025;
+    fields.status.textContent = message + ` Step ${h.toFixed(3)}: the rate 0.5 lies between ${format(lower)} and ${format(upper)}.`;
+  }
+  step.addEventListener('input', () => render());
+  fields.half.addEventListener('click', () => {
+    // Stay on the slider's 0.025 grid and never leave the admissible range.
+    step.value = Math.max(0.025, Math.floor((Number(step.value)/2 + 1e-10)/0.025)*0.025).toFixed(3);
+    render('Reduced the step; the slider rounds down to its nearest available value.');
+  });
+  fields.reset.addEventListener('click', () => { step.value = '0.4'; render('Reset the example.'); });
+  render(); panel.hidden = false;
+  const figure = panel.closest('figure');
+  if (figure) figure.querySelectorAll('[data-diagram-fallback]').forEach(node => { node.hidden = true; });
+})();
+
+(() => {
+  'use strict';
 
   const panel = document.querySelector('[data-interactive="lower-spectral-radius"]');
   if (!panel) return;
