@@ -7,6 +7,13 @@
     <language>en</language>
     <atom:link href="https://francescomaiale.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Research explained: Euler steps and switching systems</title>
+      <link>https://francescomaiale.github.io/updates/#euler-brackets-explainer-2026-10-31</link>
+      <guid isPermaLink="true">https://francescomaiale.github.io/updates/#euler-brackets-explainer-2026-10-31</guid>
+      <description>&lt;p&gt;A new illustrated guide connects continuous-time switching to matrix products and verified growth bounds. Change the time step in an exact two-matrix example, then explore why invariant faces matter.&lt;/p&gt;&lt;p&gt;&lt;a href="https://francescomaiale.github.io/research/euler-brackets/"&gt;Explore this update&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Research explained</category>
+    </item>
+    <item>
       <title>New preprint: Euler brackets for positive switched systems</title>
       <link>https://francescomaiale.github.io/updates/#euler-switched-systems-preprint-2026-10-31</link>
       <guid isPermaLink="true">https://francescomaiale.github.io/updates/#euler-switched-systems-preprint-2026-10-31</guid>
