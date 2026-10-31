@@ -1,5 +1,5 @@
-/* Compact introductions to the three research stories on the homepage. */
-.home-explainer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem}
+/* Compact introductions to the research stories on the homepage. */
+.home-explainer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}
 .home-explainer{min-width:0}
 .home-explainer-link{display:flex;flex-direction:column;height:100%;text-decoration:none}
 .home-explainer-link:focus-visible{outline-offset:6px}
